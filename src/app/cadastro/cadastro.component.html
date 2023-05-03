@@ -1,0 +1,30 @@
+<div class="nav_styles">
+    <form action="cadastrar.php" method="POST">
+            <legend class="cadastro_title">CADASTRO</legend>
+            <br/>
+            <div class="inputbox">
+                <label>NOME COMPLETO:</label>
+                <input type="text" [maxLength]="60" name="nome" required>
+            </div>
+            <div class="inputbox">
+                <br/><label>DATA DE NASCIMENTO:
+                <input type="date" name="data_nascimento" required></label>
+            </div>
+            <div class="inputbox">
+                <br/><label>CPF:
+                <input type="number" maxlength="11" name="cpf" required></label>
+            </div>
+            <div class="inputbox">
+                <br/><label>E-MAIL:
+                <input type="email" name="email" required></label>
+            </div>
+            <div class="inputbox">
+                <br/><label>CELULAR:
+                <input type="tel" maxlength="11" name="celular" required></label>
+            </div>
+            <div class="inputbox">
+                <br/><label><input type="checkbox" name="aceite_termos" required>Aceito os termos de uso:</label>
+            </div>
+                <br/><button (click)="cadastrar()" required>Cadastrar</button>
+    </form>
+</div>
