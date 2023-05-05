@@ -1,5 +1,8 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Curso } from './cadastro';
+import { map, catchError } from 'rxjs/operators';
+import { Observable, throwError } from 'rxjs';                                      
 
 @Component({
   selector: 'app-cadastro',
@@ -8,6 +11,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroComponent implements OnInit {
   
+
+
   constructor(private http:HttpClient ){
     
   }
@@ -17,22 +22,6 @@ export class CadastroComponent implements OnInit {
   }
 
   //cadastrar
-  cadastrar(){
-    const dados = {
-      cursos: {
-        nome: 'Fulano',
-        data_nascimento: '1990-01-01',
-        cpf: '12345678901',
-        email: 'fulano@example.com',
-        celular: '11999999999',
-        aceite_termos: true
-      }
-    };
-  
-    this.http.post('./php/cadastrar.php', dados).subscribe(
-      response => console.log(response),
-      error => console.error(error)
-    );
-  }
+  cadastrar(){};
 
-}
+};
